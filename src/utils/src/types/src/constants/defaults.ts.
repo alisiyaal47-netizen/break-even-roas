@@ -1,0 +1,37 @@
+import { CalculatorInputs } from "../types";
+
+/**
+ * DEFAULT VALUES
+ * These are the starting numbers when the app first loads.
+ * They give a realistic example so the user immediately sees results.
+ */
+export const defaultInputs: CalculatorInputs = {
+  productName: "Premium T-Shirt",
+  sellingPrice: 999,
+  cogs: 350,        // cost of making the product
+  shipping: 50,
+  packaging: 20,
+  gatewayFee: 20,   // 2% of selling price, approx
+  shopifyFee: 30,
+  otherCosts: 0,
+  roas: 2.5,
+  adSpend: 5000,
+};
+
+/**
+ * SAMPLE DATA
+ * Pre‑filled scenario used by the "Sample Data" button.
+ * Different product, different numbers — lets you explore quickly.
+ */
+export const sampleInputs: CalculatorInputs = {
+  productName: "Yoga Mat",
+  sellingPrice: 1500,
+  cogs: 600,
+  shipping: 80,
+  packaging: 40,
+  gatewayFee: 30,
+  shopifyFee: 45,
+  otherCosts: 25,
+  roas: 3.2,
+  adSpend: 8000,
+};
