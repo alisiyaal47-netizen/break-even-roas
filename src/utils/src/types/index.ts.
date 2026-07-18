@@ -1,0 +1,65 @@
+// All the numbers the user can change
+export interface CalculatorInputs {
+  productName: string;
+  sellingPrice: number;
+  cogs: number;           // Cost of Goods Sold
+  shipping: number;
+  packaging: number;
+  gatewayFee: number;     // Payment gateway charge
+  shopifyFee: number;
+  otherCosts: number;
+  roas: number;
+  adSpend: number;        // can be 0
+}
+
+// The results we calculate from the inputs
+export interface DerivedValues {
+  totalCost: number;
+  grossProfit: number;
+  grossMargin: number;
+  breakEvenROAS: number | null; // null if grossProfit ≤ 0
+  revenue: number;
+  advertisingCost: number;
+  profitAfterAds: number;
+  netProfit: number;
+}
+
+// Possible profit states
+/**
+ * All the numbers the user can change.
+ * This is the "input shape" for the calculator.
+ */
+export interface CalculatorInputs {
+  productName: string;
+  sellingPrice: number;
+  cogs: number;           // Cost of Goods Sold
+  shipping: number;
+  packaging: number;
+  gatewayFee: number;     // Payment gateway charge
+  shopifyFee: number;
+  otherCosts: number;
+  roas: number;
+  adSpend: number;        // can be 0
+}
+
+/**
+ * The results we calculate from the inputs.
+ * `breakEvenROAS` is null when gross profit is zero or negative
+ * (meaning you can never break even).
+ */
+export interface DerivedValues {
+  totalCost: number;
+  grossProfit: number;
+  grossMargin: number;
+  breakEvenROAS: number | null;
+  revenue: number;
+  advertisingCost: number;
+  profitAfterAds: number;
+  netProfit: number;
+}
+
+/**
+ * The three possible profit states used by the status banner.
+ */
+export type ProfitStatus = "profitable" | "break-even" | "loss";
+export type ProfitStatus = "profitable" | "break-even" | "loss";
